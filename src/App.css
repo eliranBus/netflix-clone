@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "JosefinSans-Regular";
+  src: url("./assets/fonts/JosefinSans-Regular.ttf");
+}
+@font-face {
+  font-family: "JosefinSans-Medium";
+  src: url("./assets/fonts/JosefinSans-Medium.ttf");
+}
+@font-face {
+  font-family: "JosefinSans-Bold";
+  src: url("./assets/fonts/JosefinSans-Bold.ttf");
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.App {
+  text-align: center;
+  font-family: "JosefinSans-Medium";
+}
+
+.loader {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader .loading-gif {
+  max-width: 10em;
+}
+
+h1 {
+  font-family: "JosefinSans-Bold";
+}
+
+.shows-library {
+  padding-bottom: 5em;
+}
+
+.genre-wrapper {
+  text-align: left;
+}
+
+.swiper {
+  padding: 0 10em;
+}
+
+.genre-wrapper h5 {
+  padding-left: 1.2em;
+  margin: 0.5em 0;
+  font-size: 1.2em;
+}
+
+.genre-wrapper .box-wrapper {
+  display: flex;
+  /* padding: 0 5em; */
+}
+
+.genre-wrapper .box-wrapper .show-box {
+  text-decoration: none;
+}
+
+.genre-wrapper .box-wrapper .show-box div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  margin: 1em;
+  height: 10em;
+  width: 15em;
+}
+
+.genre-wrapper .box-wrapper .show-box .box-content {
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.genre-wrapper .box-wrapper .show-box .box-content .box-text {
+  background: rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  padding: 0.3em;
+  letter-spacing: 0.5px;
+}
+
+.genre-wrapper .box-wrapper .swiper-slide {
+  /* margin-left: 10%; */
+}
+.genre-wrapper .box-wrapper .swiper-pagination {
+  margin-bottom: -1em;
+}
+
+.show-info {
+  padding: 1em 2em;
+  text-align: right;
+}
+
+.show-info h1 {
+  text-align: center;
+}
+
+.show-info .back-button {
+  margin: 0 0 2em 0;
+  font-family: "JosefinSans-Bold";
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 0.5em 1.2em;
+  border: none;
+  transition: 0.3s ease-in-out;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.show-info .back-button:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.show-info .show-info-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 2em;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+.show-info .show-info-container .loader {
+  width: 100vw;
+  max-height: 70vh;
+}
+
+.show-info .show-info-container .text {
+  width: 45%;
+  padding-right: 2em;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.show-info .show-info-container .text p {
+  text-align: justify;
+  line-height: 1.3;
+}
+
+.show-info .show-info-container .text .rating {
+  display: flex;
+}
+
+.show-info .show-info-container .text .sub-title {
+  font-weight: 700;
+}
+
+.show-info .show-info-container .image {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin-left: 1em;
+}
+
+.show-info .show-info-container .image img {
+  max-width: 30em;
+  padding: 2em;
+  width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .swiper {
+    padding: 0 5em;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .swiper {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .genre-wrapper .box-wrapper .show-box div {
+    height: 7em;
+    width: 10em;
+  }
+
+  .show-info .show-info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .show-info .show-info-container .text {
+    width: 90%;
+    padding: 0;
+    border-right: none;
+    margin-bottom: 1em;
+  }
+
+  .show-info .show-info-container .image {
+    width: 90%;
+    margin: 0;
+  }
+
+  .show-info .show-info-container .image img {
+    width: 80%;
+  }
+}
